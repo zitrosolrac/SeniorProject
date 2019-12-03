@@ -25,11 +25,11 @@ export class AstronautService {
   private createFilters( astronauts: Astronaut[]) {
     return [{
       category: 'spaceWalks',
-      displayName: 'Space walks',
+      displayName: 'Button bar',
       options: this.extractFilterOptions('spaceWalks', astronauts)
     }, {
       category: 'undergraduateMajor',
-      displayName: 'Undergraduate major',
+      displayName: 'Devices',
       options: this.extractFilterOptions('undergraduateMajor', astronauts)
     }];
   }

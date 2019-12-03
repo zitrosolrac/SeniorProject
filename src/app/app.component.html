@@ -1,5 +1,5 @@
 <mat-toolbar color="primary">
-  <h1>Astronaut Directory</h1>
+  <h1>General Dynamic</h1>
   <button mat-button [matMenuTriggerFor]="menu">
     <mat-icon>account_circle</mat-icon>
   </button>
@@ -9,9 +9,6 @@
 </mat-toolbar>
 <mat-sidenav-container>
   <mat-sidenav mode="side" opened role="region">
-    <mat-form-field class="search">
-      <input matInput placeholder="Search astronauts">
-    </mat-form-field>
     <mat-divider></mat-divider>
     <ng-container *ngFor="let filter of filters | async; last as last">
       <mat-list>
@@ -20,7 +17,7 @@
         <ng-container *ngIf="filterState[filter.category] === ''; else chip">
           <mat-list-item *ngFor="let val of filter.options">
             <button mat-button class="list-button" (click)="changeFilter(filter.category, val)">
-              {{ val }}
+              {{ " " }}
             </button>
           </mat-list-item>
         </ng-container>
@@ -41,16 +38,16 @@
   </mat-sidenav>
   <mat-sidenav-content role="region">
     <mat-card *ngFor="let astronaut of astronauts | async">
-      <mat-card-title>{{astronaut.name}}</mat-card-title>
-      <img mat-card-image [src]="astronaut.photo">
+      <mat-card-title>Satellite</mat-card-title>
+
       <mat-card-content>
         <dl>
           <dt class="mat-small">Name</dt>
-          <dd class="mat-body-2">{{ astronaut.name }}</dd>
-          <dt class="mat-small">Space walks</dt>
-          <dd class="mat-body-2">{{ astronaut.spaceWalks }}</dd>
-          <dt class="mat-small">Undergraduate major</dt>
-          <dd class="mat-body-2">{{ astronaut.undergraduateMajor }}</dd>
+          <dd class="mat-body-2"></dd>
+          <dt class="mat-small">Number</dt>
+          <dd class="mat-body-2"></dd>
+          <dt class="mat-small">Details</dt>
+          <dd class="mat-body-2"></dd>
         </dl>
       </mat-card-content>
     </mat-card>
